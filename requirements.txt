@@ -1,0 +1,4 @@
+fastapi
+uvicorn
+pymongo
+sentence-transformers
