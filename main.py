@@ -3,9 +3,8 @@ from fastapi import Request, FastAPI
 import requests
 from sentence_transformers import SentenceTransformer   
 app = FastAPI() 
-client = pymongo.MongoClient(
-    "mongodb+srv://taherbenafia:taherbenafia123@cluster0.uoj3jnq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-)
+MONGO_URI = "mongodb+srv://taherbenafia:taherbenafia123@cluster0.uoj3jnq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+client = pymongo.MongoClient(MONGO_URI)
 db = client.sample_mflix
 collection = db.movies
 
