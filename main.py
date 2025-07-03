@@ -38,9 +38,5 @@ async def recommend(req: Request):
         }
         }
         ])
-    return list(results)
-
-    
-for result in recommend({"query": query}):
-    print(result['title'], result['year'], result['plot'][:100], result['_id'])
-    print("--------------------------------------------------")
+    result = next(results, None)
+    return {"result": result}
