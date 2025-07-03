@@ -8,5 +8,5 @@ services:
     envVars:
       - key: MONGO_URI
         sync: false
-      - key: VECTOR_INDEX_NAME
+      - key: PlotSemanticSearch
         sync: false
